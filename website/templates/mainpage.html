@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <body>
+        <h1>Home: Online Memo</h1>
+        <form action="./memo/read" method="GET">
+            검색: <input type="text" name = "name"> <input type="submit" value = "검색"/>
+        </form>
+        <hr>
+        <h2><strong>글 쓰기</strong></h2>
+        <form action="./memo/create" method="POST">
+            제목: <input type="text" name = "name">
+            <br>
+            <!--내용: <input type="text" name = "content">-->
+            내용: <br><textarea name="content" cols="50" rows="5" placeholder="내용을 입력하세요."></textarea>
+            <br>
+            태그(공백으로 구분): <input type="text" name = "tag">
+            <br>
+            <input type="submit" value = "저장"/>
+        </form>
+        <hr>
+        <h2><strong>삭제</strong></h2>
+        <form action="./memo/delete" method="POST">
+            제목: <input type="text" name = "name">
+            <input type="submit" value = "삭제"/>
+        </form><br>
+        <hr>
+        <h2><strong>수정</strong></h2> 
+        <form action="./memo/modify" method="POST">
+            원제목: <input type="text" name = "name"><br>
+            수정할 제목: <input type="text" name = "fixname"><br>
+            수정할 내용: <br><textarea name="content" cols="50" rows="5" placeholder="내용을 입력하세요."></textarea>
+            <br>
+            수정할 태그(공백으로 구분): <input type="text" name = "tag">
+            <br>
+            <input type="submit" value = "수정"/>
+        </form>
+    <body>
+</html>
